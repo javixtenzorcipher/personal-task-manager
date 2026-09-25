@@ -37,13 +37,17 @@
             </div>
 
 
-            <a
-                href="/tasks/create"
-                class="button button-primary add-task-button"
-            >
-                <span aria-hidden="true">+</span>
-                Add Task
-            </a>
+@if ($tasks->count() > 0)
+
+    <a
+        href="/tasks/create"
+        class="button button-primary add-task-button"
+    >
+        <span aria-hidden="true">+</span>
+        Add Task
+    </a>
+
+@endif
 
         </header>
 
