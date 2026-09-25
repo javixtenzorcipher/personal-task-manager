@@ -413,11 +413,11 @@
     <div class="modal-box">
 
         <div class="modal-icon" aria-hidden="true">
-            !
+            <span>🗑</span>
         </div>
 
         <h2 id="modalTitle">
-            Confirm Action
+            Delete Task?
         </h2>
 
         <p id="modalMessage">
@@ -441,7 +441,7 @@
                 class="button button-danger"
                 id="modalConfirm"
             >
-                Confirm
+                Delete Task
             </button>
 
         </div>
