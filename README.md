@@ -4,18 +4,18 @@ A simple task management web application built with Laravel.
 
 📌 Project Information
 
-Project Code: WST21-PM-2026-SF
-Student Name: James Lemmar R. Sabejon
-Course & Year: BSIT - 2nd Year
-Database Used: SQLite
+- **Project Code:** WST21-PM-2026-SF
+- **Student Name:** James Lemmar R. Sabejon
+- **Course & Year:** BSIT - 2nd Year
+- **Database Used:** SQLite
 
 ✨ Required Features
 
- ➕ Add Task
- 👀 View Tasks
- ✏️ Edit Task
- 🗑️ Delete Task
- 🔄 Update Status
+- ➕ Add Task
+- 👀 View Tasks
+- ✏️ Edit Task
+- 🗑️ Delete Task
+- 🔄 Update Status
 
 🚀 Additional Features
 
@@ -29,33 +29,33 @@ The application also includes the following additional features:
  📊 Task Statistics Dashboard (total / pending / completed counts)
  📱 Responsive Design (desktop, tablet, mobile)
 
- 📝 Task Fields
+📝 Task Fields
 
- 🆔 id
- 📌 task_name
- 📄 description
- 🔖 status
- 📅 due_date
+- 🆔 id
+- 📌 task_name
+- 📄 description
+- 🔖 status
+- 📅 due_date
 
 🛠️ Technologies Used
 
- Laravel
- PHP
- SQLite
- Blade
- HTML
- CSS
- JavaScript
+- Laravel
+- PHP
+- SQLite
+- Blade
+- HTML
+- CSS
+- JavaScript
 
 🗄️ Database
 
-The application uses a tasks table containing:
+The application uses a `tasks` table containing:
 
- id – Task ID
- task_name – Name of the task
- description – Task details
- status – Pending or Completed
- due_date – Task deadline
+- **id** - Task ID
+- **task_name** - Name of the task
+- **description** - Task details
+- **status** - Pending or Completed
+- **due_date** - Task deadline
 
 🏗️ Project Structure
 
