@@ -67,7 +67,7 @@ These components work together to provide the task management CRUD functionality
 
 This project was created as a Laravel CRUD application to demonstrate the use of a database, model, controller, routes, and Blade views in developing a personal task management system.
 
-## 📸 Screenshots — Additional Features & Enhancements:
+## 📸 Screenshots - Additional Features & Enhancements:
 
 ### 📅 Due Date
 
