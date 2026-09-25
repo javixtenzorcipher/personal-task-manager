@@ -64,7 +64,7 @@ Tasks are automatically arranged by due date, with the nearest deadline displaye
 
 For example:
 
-📅 September 25, 2026
-📅 September 26, 2026
-📅 September 28, 2026
-📅 September 30, 2026
+- 📅 September 25, 2026
+- 📅 September 26, 2026
+- 📅 September 28, 2026
+- 📅 September 30, 2026
