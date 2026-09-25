@@ -4,10 +4,10 @@ A simple task management web application built with Laravel.
 
 📌 Project Information
 
-Project Code: WST21-PM-2026-SF
-Student Name: James Lemmar R. Sabejon
-Course & Year: BSIT - 2nd Year
-Database Used: SQLite
+- **Project Code:** WST21-PM-2026-SF
+- **Student Name:** James Lemmar R. Sabejon
+- **Course & Year:** BSIT - 2nd Year
+- **Database Used:** SQLite
 
 ✨ Required Features
 
