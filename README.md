@@ -59,9 +59,7 @@ The application uses a `tasks` table containing:
 
 ## 🏗️ Project Structure
 
-The project follows the Laravel structure:
-
-**Database → Model → Controller → Routes → Blade**
+The project follows the Laravel architecture using Routes, Controllers, Models, Database, and Blade Views.
 
 These components work together to provide the task management CRUD functionality.
 
