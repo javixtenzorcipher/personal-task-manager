@@ -72,7 +72,7 @@ This project was created as a Laravel CRUD application to demonstrate the use of
 ## 📸 Screenshots — Additional Features & Enhancements:
 
 ### 📅 Due Date
-<img src="https://github.com/user-attachments/assets/3e63cb6c-07ab-4dda-b09a-9f2215509236" alt="Due Date" width="900">
+<img src="https://github.com/user-attachments/assets/49e26008-8b8e-44a2-9916-287b61c1e30f" alt="Due Date" width="900">
 
 ### ✅ Form Validation
 <img src="https://github.com/user-attachments/assets/5fcf60eb-acf6-47ac-85df-2695862d9068" alt="Form Validation" width="900">
