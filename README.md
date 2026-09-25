@@ -21,13 +21,13 @@ A simple task management web application built with Laravel.
 
 The application also includes the following additional features:
 
- 📅 Set a Due Date
- ✅ Form Validation
- ⚠️ Delete Confirmation (modal dialog)
- 🔍 Search Tasks by Name
- 📆 Tasks arranged by nearest due date
- 📊 Task Statistics Dashboard (total / pending / completed counts)
- 📱 Responsive Design (desktop, tablet, mobile)
+- 📅 Set a Due Date
+- ✅ Form Validation
+- ⚠️ Delete Confirmation (modal dialog)
+- 🔍 Search Tasks by Name
+- 📆 Tasks arranged by nearest due date
+- 📊 Task Statistics Dashboard (total / pending / completed counts)
+- 📱 Responsive Design (desktop, tablet, mobile)
 
 📝 Task Fields
 
