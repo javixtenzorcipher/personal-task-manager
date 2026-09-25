@@ -7,11 +7,23 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $tasks = Task::orderBy('due_date', 'asc')->get();
+        // Get the search input
+        $search = $request->input('search');
 
-        return view('tasks.index', compact('tasks'));
+        // Get all tasks for the statistics
+        $allTasks = Task::orderBy('due_date', 'asc')->get();
+
+        // Get tasks for the task list
+        $tasks = Task::query()
+            ->when($search, function ($query, $search) {
+                $query->where('task_name', 'like', '%' . $search . '%');
+            })
+            ->orderBy('due_date', 'asc')
+            ->get();
+
+        return view('tasks.index', compact('tasks', 'allTasks', 'search'));
     }
 
     public function create()

@@ -1,80 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Add Task</title>
+
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
 
-<div class="container">
+<div class="page">
 
-    <div class="card form-card">
+    <div class="container">
 
-        <h1>Add Task</h1>
-        <p>Create a new task and set its deadline.</p>
+        <div class="card form-card">
 
-        @if ($errors->any())
-            <div class="error">
-                <strong>Please fix the following:</strong>
+            <div class="form-header">
+                <div class="page-icon" aria-hidden="true">
+                    +
+                </div>
 
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+                <div>
+                    <p class="eyebrow">TASK MANAGEMENT</p>
 
-        <form method="POST" action="/tasks">
+                    <h1>Add Task</h1>
 
-            @csrf
-
-            <div class="form-group">
-                <label>Task Name</label>
-                <input type="text"
-                       name="task_name"
-                       value="{{ old('task_name') }}"
-                       placeholder="Enter task name">
+                    <p class="form-subtitle">
+                        Create a new task and set its deadline.
+                    </p>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label>Description</label>
-                <textarea name="description"
-                          placeholder="Enter task description">{{ old('description') }}</textarea>
-            </div>
 
-            <div class="form-group">
-                <label>Status</label>
+            @if ($errors->any())
 
-                <select name="status">
-                    <option value="Pending">Pending</option>
-                    <option value="Completed">Completed</option>
-                </select>
-            </div>
+                <div class="error" role="alert">
 
-            <div class="form-group">
-                <label>Due Date</label>
+                    <div class="error-title">
+                        Please fix the following:
+                    </div>
 
-                <input type="date"
-                       name="due_date"
-                       value="{{ old('due_date') }}">
-            </div>
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
 
-            <button type="submit" class="button">
-                Save Task
-            </button>
+                </div>
 
-            <br>
+            @endif
 
-            <a href="/tasks" class="back">
-                ← Back to Tasks
-            </a>
 
-        </form>
+            <form method="POST" action="/tasks">
+
+                @csrf
+
+
+                <div class="form-group">
+
+                    <label for="task_name">
+                        Task Name
+                        <span class="required">*</span>
+                    </label>
+
+                    <input
+                        type="text"
+                        id="task_name"
+                        name="task_name"
+                        value="{{ old('task_name') }}"
+                        placeholder="e.g. Complete project documentation"
+                        autocomplete="off"
+                        required
+                    >
+
+                    <span class="field-hint">
+                        Give your task a clear and recognizable name.
+                    </span>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        placeholder="Describe what needs to be done..."
+                    >{{ old('description') }}</textarea>
+
+                    <span class="field-hint">
+                        Add details that will help you remember what to do.
+                    </span>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="status">
+                            Status
+                        </label>
+
+                        <select id="status" name="status">
+
+                            <option value="Pending"
+                                {{ old('status', 'Pending') == 'Pending' ? 'selected' : '' }}>
+                                Pending
+                            </option>
+
+                            <option value="Completed"
+                                {{ old('status') == 'Completed' ? 'selected' : '' }}>
+                                Completed
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="due_date">
+                            Due Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="due_date"
+                            name="due_date"
+                            value="{{ old('due_date') }}"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button type="submit" class="button button-primary">
+                        Save Task
+                    </button>
+
+                    <a href="/tasks" class="button button-secondary">
+                        Cancel
+                    </a>
+
+                </div>
+
+
+                <a href="/tasks" class="back">
+                    ← Back to Tasks
+                </a>
+
+            </form>
+
+        </div>
 
     </div>
 
 </div>
 
 </body>
+
 </html>

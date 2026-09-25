@@ -21,22 +21,34 @@
 
         <div class="card form-card">
 
-            <h1>Edit Task</h1>
+            <div class="form-header">
 
-            <p>
-                Update your task information and status.
-            </p>
+                <div class="page-icon page-icon-edit" aria-hidden="true">
+                    ✎
+                </div>
 
+                <div>
 
-            <!-- VALIDATION ERRORS -->
+                    <p class="eyebrow">TASK MANAGEMENT</p>
+
+                    <h1>Edit Task</h1>
+
+                    <p class="form-subtitle">
+                        Update your task information and status.
+                    </p>
+
+                </div>
+
+            </div>
+
 
             @if ($errors->any())
 
-                <div class="error">
+                <div class="error" role="alert">
 
-                    <strong>
+                    <div class="error-title">
                         Please fix the following:
-                    </strong>
+                    </div>
 
                     <ul>
 
@@ -55,8 +67,6 @@
             @endif
 
 
-            <!-- EDIT FORM -->
-
             <form
                 method="POST"
                 action="/tasks/{{ $task->id }}"
@@ -67,26 +77,25 @@
                 @method('PUT')
 
 
-                <!-- TASK NAME -->
-
                 <div class="form-group">
 
                     <label for="task_name">
                         Task Name
+                        <span class="required">*</span>
                     </label>
 
                     <input
                         type="text"
                         id="task_name"
                         name="task_name"
-                        value="{{ $task->task_name }}"
+                        value="{{ old('task_name', $task->task_name) }}"
                         placeholder="Enter task name"
+                        autocomplete="off"
+                        required
                     >
 
                 </div>
 
-
-                <!-- DESCRIPTION -->
 
                 <div class="form-group">
 
@@ -98,12 +107,10 @@
                         id="description"
                         name="description"
                         placeholder="Enter task description"
-                    >{{ $task->description }}</textarea>
+                    >{{ old('description', $task->description) }}</textarea>
 
                 </div>
 
-
-                <!-- STATUS AND DUE DATE -->
 
                 <div class="form-row">
 
@@ -120,14 +127,14 @@
 
                             <option
                                 value="Pending"
-                                {{ $task->status == 'Pending' ? 'selected' : '' }}
+                                {{ old('status', $task->status) == 'Pending' ? 'selected' : '' }}
                             >
                                 Pending
                             </option>
 
                             <option
                                 value="Completed"
-                                {{ $task->status == 'Completed' ? 'selected' : '' }}
+                                {{ old('status', $task->status) == 'Completed' ? 'selected' : '' }}
                             >
                                 Completed
                             </option>
@@ -147,7 +154,7 @@
                             type="date"
                             id="due_date"
                             name="due_date"
-                            value="{{ $task->due_date }}"
+                            value="{{ old('due_date', $task->due_date) }}"
                         >
 
                     </div>
@@ -155,21 +162,24 @@
                 </div>
 
 
-                <!-- BUTTON -->
-
                 <div class="form-actions">
 
                     <button
                         type="submit"
-                        class="button"
+                        class="button button-primary"
                     >
                         Update Task
                     </button>
 
+                    <a
+                        href="/tasks"
+                        class="button button-secondary"
+                    >
+                        Cancel
+                    </a>
+
                 </div>
 
-
-                <!-- BACK -->
 
                 <a
                     href="/tasks"

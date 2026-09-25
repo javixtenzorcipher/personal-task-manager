@@ -12,8 +12,57 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalCancel = document.getElementById('modalCancel');
 
     let selectedForm = null;
+    let previousFocus = null;
 
-    const confirmForms = document.querySelectorAll('form[data-confirm]');
+
+    function openModal(form) {
+
+        selectedForm = form;
+        previousFocus = document.activeElement;
+
+        modalTitle.textContent =
+            form.dataset.confirmTitle || 'Confirm Action';
+
+        modalMessage.textContent =
+            form.dataset.confirmMessage || 'Are you sure?';
+
+        modalConfirm.textContent =
+            form.dataset.confirmButton || 'Confirm';
+
+
+        modalConfirm.classList.remove('modal-danger');
+
+        if (form.dataset.confirmType === 'delete') {
+            modalConfirm.classList.add('modal-danger');
+        }
+
+
+        modal.classList.add('show');
+
+        document.body.style.overflow = 'hidden';
+
+        modalConfirm.focus();
+    }
+
+
+    function closeModal() {
+
+        modal.classList.remove('show');
+
+        document.body.style.overflow = '';
+
+        selectedForm = null;
+
+        if (previousFocus) {
+            previousFocus.focus();
+            previousFocus = null;
+        }
+    }
+
+
+    const confirmForms =
+        document.querySelectorAll('form[data-confirm]');
+
 
     confirmForms.forEach(function (form) {
 
@@ -21,43 +70,52 @@ document.addEventListener('DOMContentLoaded', function () {
 
             event.preventDefault();
 
-            selectedForm = form;
+            openModal(form);
 
-            modalTitle.textContent = form.dataset.confirmTitle;
-            modalMessage.textContent = form.dataset.confirmMessage;
-            modalConfirm.textContent = form.dataset.confirmButton;
-
-            if (form.dataset.confirmType === 'delete') {
-                modalConfirm.classList.add('modal-danger');
-            } else {
-                modalConfirm.classList.remove('modal-danger');
-            }
-
-            modal.classList.add('show');
         });
 
     });
 
+
     modalCancel.addEventListener('click', function () {
 
-        modal.classList.remove('show');
-        selectedForm = null;
+        closeModal();
 
     });
+
 
     modalConfirm.addEventListener('click', function () {
 
-        if (selectedForm) {
-            selectedForm.submit();
+        if (!selectedForm) {
+            return;
         }
 
+        const form = selectedForm;
+
+        closeModal();
+
+        form.submit();
+
     });
+
 
     modal.addEventListener('click', function (event) {
 
         if (event.target === modal) {
-            modal.classList.remove('show');
-            selectedForm = null;
+            closeModal();
+        }
+
+    });
+
+
+    document.addEventListener('keydown', function (event) {
+
+        if (!modal.classList.contains('show')) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            closeModal();
         }
 
     });

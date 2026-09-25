@@ -23,8 +23,11 @@ The application also includes the following additional features:
 
  📅 Set a Due Date
  ✅ Form Validation
- ⚠️ Delete Confirmation
- 📆 Tasks are arranged by nearest due date
+ ⚠️ Delete Confirmation (modal dialog)
+ 🔍 Search Tasks by Name
+ 📆 Tasks arranged by nearest due date
+ 📊 Task Statistics Dashboard (total / pending / completed counts)
+ 📱 Responsive Design (desktop, tablet, mobile)
 
  📝 Task Fields
 
@@ -67,3 +70,24 @@ These components work together to provide the task management CRUD functionality
 This project was created as a Laravel CRUD application to demonstrate the use of a database, model, controller, routes, and Blade views in developing a personal task management system.
 
 📸 Screenshots
+
+📅 Due Date
+![Due Date](screenshots/due-date.png)
+
+✅ Form Validation
+![Form Validation](screenshots/form-validation.png)
+
+⚠️ Delete Confirmation
+![Delete Confirmation](screenshots/delete-confirmation.png)
+
+🔍 Search Tasks by Name
+![Search Tasks](screenshots/search-tasks.png)
+
+📆 Due Date Sorting
+![Due Date Sorting](screenshots/due-date-sorting.png)
+
+📊 Task Statistics Dashboard
+![Task Statistics](screenshots/task-statistics.png)
+
+📱 Responsive Design
+![Responsive Design](screenshots/mobile-view.png)
