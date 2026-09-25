@@ -69,25 +69,25 @@ These components work together to provide the task management CRUD functionality
 
 This project was created as a Laravel CRUD application to demonstrate the use of a database, model, controller, routes, and Blade views in developing a personal task management system.
 
-📸 Screenshots
+## 📸 Screenshots — Additional Features & Enhancements:
 
-📅 Due Date
-![Due Date](screenshots/due-date.png)
+### 📅 Due Date
+<img src="https://github.com/user-attachments/assets/3e63cb6c-07ab-4dda-b09a-9f2215509236" alt="Due Date" width="900">
 
-✅ Form Validation
-![Form Validation](screenshots/form-validation.png)
+### ✅ Form Validation
+<img src="https://github.com/user-attachments/assets/5fcf60eb-acf6-47ac-85df-2695862d9068" alt="Form Validation" width="900">
 
-⚠️ Delete Confirmation
-![Delete Confirmation](screenshots/delete-confirmation.png)
+### ⚠️ Delete Confirmation
+<img src="https://github.com/user-attachments/assets/3a074e3b-481b-4da5-8d70-868326e134c0" alt="Delete Confirmation" width="900">
 
-🔍 Search Tasks by Name
-![Search Tasks](screenshots/search-tasks.png)
+### 🔍 Search Tasks by Name
+<img src="https://github.com/user-attachments/assets/3bbc750a-3d3b-4d51-8827-174ed28d614b" alt="Search Tasks by Name" width="900">
 
-📆 Due Date Sorting
-![Due Date Sorting](screenshots/due-date-sorting.png)
+### 📆 Due Date Sorting
+<img src="https://github.com/user-attachments/assets/cbc09f2f-6830-4185-bd9d-c88e62946ee1" alt="Due Date Sorting" width="900">
 
-📊 Task Statistics Dashboard
-![Task Statistics](screenshots/task-statistics.png)
+### 📊 Task Statistics Dashboard
+<img src="https://github.com/user-attachments/assets/1687e8a4-3ac6-4d04-8285-34ed19cd8730" alt="Task Statistics Dashboard" width="900">
 
-📱 Responsive Design
-![Responsive Design](screenshots/mobile-view.png)
+### 📱 Responsive Design
+<img src="https://github.com/user-attachments/assets/424b9c46-9fc6-408e-a208-803f196570c9" alt="Responsive Design" width="900">
