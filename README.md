@@ -69,33 +69,29 @@ This project was created as a Laravel CRUD application to demonstrate the use of
 
 📸 Screenshots for the Additional Features:
 
-📸 Screenshots for the Additional Features
-
-📸 Screenshots for the Additional Features
-
 📅 Due Date
 
 <img width="600" alt="DUE-DATE" src="https://github.com/user-attachments/assets/1d8467ae-27f4-472e-b409-7487a504e63b" />
 
-<br>
+<br><br>
 
 ✅ Form Validation
 
 <img width="600" alt="FORM-VALIDATION" src="https://github.com/user-attachments/assets/509c2c9d-4f0f-4042-962e-eeacac269f44" />
 
-<br>
+<br><br>
 
 ⚠️ Delete Confirmation
 
 <img width="600" alt="DELETE-CONFIRMATION" src="https://github.com/user-attachments/assets/d0bbd7b6-052d-4138-a563-c56537a42198" />
 
-<br>
+<br><br>
 
 📆 Due Date Sorting
 
 <img width="600" alt="DUE-DATE-SORTING" src="https://github.com/user-attachments/assets/4eccb043-ea24-481d-a33a-23a9a8d1f36e" />
 
-<br>
+<br><br>
 
 📱 Responsive Design
 
