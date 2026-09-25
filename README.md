@@ -11,49 +11,49 @@ A simple task management web application built with Laravel.
 
 ✨ Required Features
 
- ➕ Add Task
- 👀 View Tasks
- ✏️ Edit Task
- 🗑️ Delete Task
- 🔄 Update Status
+- ➕ Add Task
+- 👀 View Tasks
+- ✏️ Edit Task
+- 🗑️ Delete Task
+- 🔄 Update Status
 
 🚀 Additional Features
 
 The application also includes the following additional features:
 
- 📅 Set a Due Date
- ✅ Form Validation
- ⚠️ Delete Confirmation
- 📆 Tasks are arranged by nearest due date
- 📱 Responsive Design (desktop, tablet, mobile)
+- 📅 Set a Due Date
+- ✅ Form Validation
+- ⚠️ Delete Confirmation
+- 📆 Tasks are arranged by nearest due date
+- 📱 Responsive Design (desktop, tablet, mobile)
 
 📝 Task Fields
 
- 🆔 id
- 📌 task_name
- 📄 description
- 🔖 status
- 📅 due_date
+- 🆔 id
+- 📌 task_name
+- 📄 description
+- 🔖 status
+- 📅 due_date
 
 🛠️ Technologies Used
 
- Laravel
- PHP
- SQLite
- Blade
- HTML
- CSS
- JavaScript
+- Laravel
+- PHP
+- SQLite
+- Blade
+- HTML
+- CSS
+- JavaScript
 
 🗄️ Database
 
-The application uses a tasks table containing:
+The application uses a `tasks` table containing:
 
- id - Task ID
- task_name - Name of the task
- description - Task details
- status - Pending or Completed
- due_date - Task deadline
+- **id** – Task ID
+- **task_name** – Name of the task
+- **description** – Task details
+- **status** – Pending or Completed
+- **due_date** – Task deadline
 
 🏗️ Project Structure
 
@@ -67,7 +67,7 @@ These components work together to provide the task management CRUD functionality
 
 This project was created as a Laravel CRUD application to demonstrate the use of a database, model, controller, routes, and Blade views in developing a personal task management system.
 
-📸 Screenshots for the Additional Features:
+📸 Screenshots for the Additional Features
 
 📅 Due Date
 <img width="853" height="778" alt="DUE-DATE" src="https://github.com/user-attachments/assets/1d8467ae-27f4-472e-b409-7487a504e63b" />
